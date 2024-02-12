@@ -34,6 +34,6 @@ class Images:
     
 
 if __name__ == "__main__":
-  el = Images(r"C:\Users\danii\OneDrive\Рабочий стол\lib_perl\cgi-bin\cgi-bin_2\perl\core_data.tar\картинки сигейм\Флешка 2\АиСД\фото_метро\ТОЭ\y\n\1")
+  el = Images(r"C:\Users\danii\OneDrive")
   el.convertWebpToJpeg()
   
