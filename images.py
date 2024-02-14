@@ -8,9 +8,9 @@ class Images:
   dirFiles = []
   newPath = ""
 
-  def __init__(self, dir):
+  def __init__(self, dir, endDir):
     self.dirName = dir
-    self.newPath = self.dirName + '\\' + 'converted'
+    self.newPath = endDir + '\\' + self.dirName.split('/')[-1] + '_' + 'converted'
     self.files = self.listOfDir()
     self.dirFiles = []
 

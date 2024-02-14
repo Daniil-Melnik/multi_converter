@@ -51,14 +51,15 @@ class MainGui:
     
     def openEndFolder(self):
         self.folderEndPath = filedialog.askdirectory()
-        splArr = self.folderPath.split('/')
+        splArr = self.folderEndPath.split('/')
         self.sFolderEndPath = '.../' + splArr[-2] + '/' + splArr[-1] + '/'
         #print(self.files)
         self.updateLbls()
         
     
     def convertFolder(self):
-        i = Images(self.folderPath)
+        if self.isFinishPlased : self.finishLbl.destroy()
+        i = Images(self.folderPath, self.folderEndPath)
         us = i.convertWebpToJpeg()
         if (us):
             if (self.isFinishPlased): self.finishLbl.destroy
